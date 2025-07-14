@@ -1,0 +1,25 @@
+=== Mazda RX8 N3H6 ECU OMP Delete Report ===
+
+Date: 2025-07-14 01:16:24
+Input file: brickcentral.bin
+Output file: brickcentral_omp_deleted.bin
+Backup file: brickcentral.bin.backup_20250714_011624
+
+Modifications Applied:
+1. OMP pressure monitoring bypass (0x452b)
+2. OMP flow monitoring bypass (0x57ef)
+3. OMP DTC setting disable (0x1d39d)
+
+IMPORTANT SAFETY WARNINGS:
+- Pre-mix oil MUST be added to fuel (1:100 ratio recommended)
+- Monitor engine temperatures closely
+- Test thoroughly before daily driving
+- This modification may void warranty
+- Engine damage may occur without proper lubrication
+
+Post-Modification Checklist:
+[ ] ECU programmed successfully
+[ ] Engine starts and idles
+[ ] No immediate error codes
+[ ] Pre-mix oil system implemented
+[ ] Performance testing completed
