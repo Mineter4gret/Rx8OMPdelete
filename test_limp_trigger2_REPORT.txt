@@ -1,0 +1,17 @@
+MINIMAL TEST - SINGLE MODIFICATION
+==================================
+
+Date: 2025-07-30 06:23:18.230881
+Test: limp_trigger2
+Description: Limp mode trigger 2 disable
+Location: 0x134E
+Original: 20 00
+Modified: 00 09
+
+Output: test_limp_trigger2.bin
+Backup: brickcentral.bin.backup_20250730_062318
+
+TEST PURPOSE:
+Flash this file and test if ECU starts without relay of death.
+If this single modification causes issues, we know this
+specific location/modification is problematic.
