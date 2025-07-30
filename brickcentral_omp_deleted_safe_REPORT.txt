@@ -1,0 +1,16 @@
+SAFE OMP DELETE TOOL - AUTOMATED REPORT
+==================================================
+
+Date: 2025-07-30 03:27:48.958210
+Input: brickcentral.bin
+Output: brickcentral_omp_deleted_safe.bin
+Backup: brickcentral.bin.backup_20250730_032748
+
+Modifications Applied:
+- OMP pressure monitoring bypass at 0x452B
+- OMP flow monitoring bypass at 0x57EF
+- OMP DTC setting disable at 0x1D39D
+
+Checksums Corrected: 3
+
+WARNING: Add pre-mix oil to fuel (1:100 ratio)
