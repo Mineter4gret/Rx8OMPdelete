@@ -1,0 +1,17 @@
+MINIMAL TEST - SINGLE MODIFICATION
+==================================
+
+Date: 2025-07-30 06:23:18.224429
+Test: omp_dtc
+Description: OMP DTC setting disable
+Location: 0x1D39D
+Original: 19 01 fc 21
+Modified: 00 09 00 09
+
+Output: test_omp_dtc.bin
+Backup: brickcentral.bin.backup_20250730_062318
+
+TEST PURPOSE:
+Flash this file and test if ECU starts without relay of death.
+If this single modification causes issues, we know this
+specific location/modification is problematic.

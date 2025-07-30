@@ -1,0 +1,37 @@
+SIMPLE OMP DELETE TOOL - NO CHECKSUM HANDLING
+==================================================
+
+Date: 2025-07-30 05:36:24.843866
+Input: brickcentral.bin
+Output: brickcentral_omp_deleted_simple.bin
+Backup: brickcentral.bin.backup_20250730_053624
+
+MODIFICATIONS APPLIED:
+- OMP pressure monitoring bypass at 0x452B
+  Original: 19 00 0b 62
+  Modified: 00 09 00 09
+
+- OMP flow monitoring bypass at 0x57EF
+  Original: 19 00 09 60
+  Modified: 00 09 00 09
+
+- OMP DTC setting disable at 0x1D39D
+  Original: 19 01 fc 21
+  Modified: 00 09 00 09
+
+- Limp mode trigger 1 disable at 0x09AA
+  Original: 20 00
+  Modified: 00 09
+
+- Limp mode trigger 2 disable at 0x134E
+  Original: 20 00
+  Modified: 00 09
+
+IMPORTANT NOTES:
+- NO checksum modifications made
+- Flashing program will calculate checksums automatically
+- Pre-mix oil REQUIRED (1:100 ratio)
+- Monitor engine parameters after installation
+
+RECOVERY:
+If issues occur, restore: brickcentral.bin.backup_20250730_053624

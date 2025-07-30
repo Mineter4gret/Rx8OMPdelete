@@ -1,0 +1,26 @@
+COMPLETE OMP DELETE - IMMOBILIZER FIX VERSION
+==================================================
+
+Date: 2025-07-30 04:00:55.823230
+Purpose: Fix immobilizer light by applying ALL modifications
+
+COMPLETE MODIFICATIONS APPLIED:
+- OMP pressure monitoring bypass at 0x452B
+- OMP flow monitoring bypass at 0x57EF
+- OMP DTC setting disable at 0x1D39D
+- Limp mode trigger 1 disable (CRITICAL for immobilizer) at 0x09AA
+- Limp mode trigger 2 disable (CRITICAL for immobilizer) at 0x134E
+
+CHECKSUMS CORRECTED: 3
+- Main Program CRC32: 0xFFFFFFFF → 0x7B302201
+- Calibration Sum32: 0x8D1D0009 → 0xFF97C65A
+- Boot Block CRC16: 0x00002000 → 0x0000FC83
+
+CRITICAL NOTES:
+- This version includes boot area modifications
+- Should resolve immobilizer light issues
+- All OMP monitoring completely disabled
+- Pre-mix oil REQUIRED (1:100 ratio)
+
+RECOVERY FILE:
+Original backup: brickcentral.bin.backup_20250730_040055

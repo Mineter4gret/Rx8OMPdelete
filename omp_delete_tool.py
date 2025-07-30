@@ -47,6 +47,12 @@ class OMPDeleteTool:
         """Calculate MD5 checksum of the current data"""
         return hashlib.md5(self.data).hexdigest()
     
+    def calculate_ecu_checksums(self):
+        """Calculate ECU-specific checksums (CRITICAL MISSING FUNCTION)"""
+        print("⚠️  WARNING: ECU checksum correction not implemented!")
+        print("⚠️  This will cause ECU to brick - DO NOT USE!")
+        return False
+    
     def apply_omp_modifications(self):
         """Apply OMP delete modifications"""
         print("\n=== Applying OMP Delete Modifications ===")
@@ -235,6 +241,14 @@ class OMPDeleteTool:
         
         # Apply additional safety modifications
         self.additional_safety_modifications()
+        
+        # CRITICAL: Calculate and apply ECU checksums
+        print("\n🔧 CRITICAL: ECU checksum correction required...")
+        if not self.calculate_ecu_checksums():
+            print("❌ CRITICAL ERROR: ECU checksum correction not implemented!")
+            print("❌ Using this firmware WILL BRICK your ECU!")
+            print("❌ DO NOT FLASH this firmware!")
+            return False
         
         # Verify modifications
         if not self.verify_modifications():

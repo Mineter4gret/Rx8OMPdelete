@@ -1,0 +1,17 @@
+MINIMAL TEST - SINGLE MODIFICATION
+==================================
+
+Date: 2025-07-30 06:23:18.215139
+Test: omp_pressure
+Description: OMP pressure monitoring bypass
+Location: 0x452B
+Original: 19 00 0b 62
+Modified: 00 09 00 09
+
+Output: test_omp_pressure.bin
+Backup: brickcentral.bin.backup_20250730_062318
+
+TEST PURPOSE:
+Flash this file and test if ECU starts without relay of death.
+If this single modification causes issues, we know this
+specific location/modification is problematic.
